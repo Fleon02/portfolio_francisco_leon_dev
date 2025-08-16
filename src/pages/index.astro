@@ -9,43 +9,53 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import TitleSection from "../components/TitleSection.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
   title="Portfolio Francisco León Desarrolador Full Stack"
   description="Contrata a Francisco León, un desarrollador Full Stack con preferencia en Backend con experiencia en Java, Python , C#, React, Angular y más."
 >
-  <main>
-    <SectionContainer>
+  <main class="px-4">
+    <SectionContainer
+      class="flex flex-col items-center text-center sm:text-left sm:items-start"
+    >
       <img
-        class="rounded-full w-12 h-12 mb-4"
+        class="rounded-full w-24 h-24 mb-4 sm:w-28 sm:h-28"
         src="./assets/francisco_leon.jpg"
         alt="franciscoleon photo"
       />
-      <h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-10">
+
+      <h1
+        class="text-white text-3xl sm:text-4xl font-bold flex flex-col sm:flex-row sm:gap-x-4 pb-6"
+      >
         Hola, soy Francisco León
-        <div class="flex justify-center items-center">
+        <div
+          class="flex justify-center sm:justify-start items-center mt-2 sm:mt-0"
+        >
           <a
             href="https://www.linkedin.com/in/francisco-le%C3%B3n-marcos-93a984250/"
             target="_blank"
             rel="noopener"
             class="flex justify-center items-center"
           >
-            <Badge> Disponible para trabajar</Badge>
+            <Badge>Disponible para trabajar</Badge>
           </a>
         </div>
       </h1>
-      <h2 class="text-lg text-wrap">
-        <span class="text-white">Joven con ganas de aprender.</span>
-        <span class="text-yellow-200/90"
-          >Desarrollador Full Stack con preferencia en el Backend.</span
-        >
-        <span class="text-red-200/90">
-          de Villaviciosa de Odón, Madrid, España 🇪🇸</span
-        >
+
+      <h2 class="text-base sm:text-lg leading-relaxed">
+        <span class="text-white block">Joven con ganas de aprender.</span>
+        <span class="text-yellow-200/90 block">
+          Desarrollador Full Stack con preferencia en el Backend.
+        </span>
+        <span class="text-red-200/90 block">
+          de Villaviciosa de Odón, Madrid, España 🇪🇸
+        </span>
       </h2>
 
-      <ul class="flex flex-row mb-2 gap-x-2 mt-4">
+      <ul class="flex flex-col sm:flex-row gap-3 mt-6">
         <li>
           <SocialPhill>
             <GithubIcon class="w-6 h-6" />
@@ -79,16 +89,16 @@ import Briefcase from "../components/icons/Briefcase.astro";
 
     <SectionContainer class="relative" id="experiencia2">
       <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral 2
+        <Code class="size-8" />
+        Proyectos
       </TitleSection>
-      <Experience />
+      <Projects />
     </SectionContainer>
 
     <SectionContainer class="relative" id="experiencia3">
       <TitleSection>
         <Briefcase class="size-8" />
-        Experiencia laboral 3
+        Sobre mi
       </TitleSection>
       <Experience />
     </SectionContainer>
