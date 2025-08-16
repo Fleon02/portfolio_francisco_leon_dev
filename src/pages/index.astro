@@ -1,11 +1,96 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from "../components/Badge.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import Layout from "../layouts/Layout.astro";
+import SocialPhill from "../components/SocialPhill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Portfolio Francisco León Desarrolador Full Stack"
+  description="Contrata a Francisco León, un desarrollador Full Stack con preferencia en Backend con experiencia en Java, Python , C#, React, Angular y más."
+>
+  <main>
+    <SectionContainer>
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="./assets/francisco_leon.jpg"
+        alt="franciscoleon photo"
+      />
+      <h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-10">
+        Hola, soy Francisco León
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/francisco-le%C3%B3n-marcos-93a984250/"
+            target="_blank"
+            rel="noopener"
+            class="flex justify-center items-center"
+          >
+            <Badge> Disponible para trabajar</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-lg text-wrap">
+        <span class="text-white">Joven con ganas de aprender.</span>
+        <span class="text-yellow-200/90"
+          >Desarrollador Full Stack con preferencia en el Backend.</span
+        >
+        <span class="text-red-200/90">
+          de Villaviciosa de Odón, Madrid, España 🇪🇸</span
+        >
+      </h2>
+
+      <ul class="flex flex-row mb-2 gap-x-2 mt-4">
+        <li>
+          <SocialPhill>
+            <GithubIcon class="w-6 h-6" />
+            Git
+          </SocialPhill>
+        </li>
+        <li>
+          <SocialPhill href="mailto:leonmarcosf@gmail.com">
+            <MailIcon class="w-6 h-6" />
+            leonmarcosf@gmail.com
+          </SocialPhill>
+        </li>
+        <li>
+          <SocialPhill
+            href="https://www.linkedin.com/in/francisco-le%C3%B3n-marcos-93a984250/"
+          >
+            <LinkedinIcon class="w-6 h-6" />
+            LinkedIn
+          </SocialPhill>
+        </li>
+      </ul>
+    </SectionContainer>
+
+    <SectionContainer class="relative" id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer class="relative" id="experiencia2">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral 2
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer class="relative" id="experiencia3">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral 3
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+  </main>
 </Layout>

@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Abril 2024 - Junio 2024",
+    title: "Desarrolador en Prácticas",
+    company: "Grupo FTP , Fuenlabrada",
+    description:
+      "Desarrollador de aplicaciones con C# y .NET gestionada por una Base de Datos SQL Server encargada de la creación de archivos XLS con información de clientes.",
+  },
+  {
+    date: "Octubre 2021 - Mayo 2022",
+    title: "Técnico en Prácticas",
+    company: "Verne Technology Group, Alcorcón",
+    description:
+      "Encargado en la resolución de incidencias en errores en las instalaciones de red en centros educativos de la Comunidad de Madrid.",
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <ExperienceItem {...experience} />
+    ))
+  }
+</ol>
