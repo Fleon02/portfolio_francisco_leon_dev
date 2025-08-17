@@ -11,6 +11,8 @@ import TitleSection from "../components/TitleSection.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import SobreMi from "../components/SobreMi.astro";
+import User from "../components/icons/User.astro";
 ---
 
 <Layout
@@ -57,12 +59,6 @@ import Projects from "../components/Projects.astro";
 
       <ul class="flex flex-col sm:flex-row gap-3 mt-6">
         <li>
-          <SocialPhill>
-            <GithubIcon class="w-6 h-6" />
-            Git
-          </SocialPhill>
-        </li>
-        <li>
           <SocialPhill href="mailto:leonmarcosf@gmail.com">
             <MailIcon class="w-6 h-6" />
             leonmarcosf@gmail.com
@@ -87,7 +83,7 @@ import Projects from "../components/Projects.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer class="relative" id="experiencia2">
+    <SectionContainer class="relative" id="proyectos">
       <TitleSection>
         <Code class="size-8" />
         Proyectos
@@ -95,12 +91,12 @@ import Projects from "../components/Projects.astro";
       <Projects />
     </SectionContainer>
 
-    <SectionContainer class="relative" id="experiencia3">
+    <SectionContainer class="relative" id="sobre-mi">
       <TitleSection>
-        <Briefcase class="size-8" />
+        <User class="size-8" />
         Sobre mi
       </TitleSection>
-      <Experience />
+      <SobreMi />
     </SectionContainer>
   </main>
 </Layout>
